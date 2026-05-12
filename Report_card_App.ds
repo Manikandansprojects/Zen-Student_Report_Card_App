@@ -1,0 +1,2108 @@
+/*
+ * Author       : demo2zentegra
+ * Generated on : 11-May-2026 22:34:01
+ * Version      : 1.0
+ */
+ application "Report card App"
+ {
+ 	date format = "dd-MMM-yyyy"
+ 	time zone = "America/Chicago"
+ 	time format = "24-hr"
+
+ 	forms
+	{
+		form Student_all_details
+		{
+			displayname = "Student all details"
+			success message = "Data Added Successfully!"
+			Section
+			(
+				type = section
+	 			row = 1
+	 			column = 0   
+				width = medium
+			)
+			must have Student_Name
+			(
+    			type = name
+				displayname = "Student Name"
+     			prefix
+     			(
+	     			 type = prefix
+	     			 displayname ="Prefix"
+	     			 visibility = false
+	     			 value = {"Mr.","Mrs.","Ms."}
+     			) 
+     			first_name
+     			(
+	     			 type = first_name
+	     			 displayname ="First Name"
+     			) 
+     			last_name
+     			(
+	     			 type = last_name
+	     			 displayname ="Last Name"
+	     			 visibility = false
+     			) 
+     			suffix
+     			(
+	     			 type = suffix
+	     			 displayname ="Suffix"
+	     			 visibility = false
+     			) 
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Student_Register_number
+			(
+    			type = text
+				displayname = "Student Register number"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Academic_year
+			(
+				type = picklist
+				displayname = "Academic year"
+				maxchar = 100
+				values = {"2021 - 2022","2022 - 2023","2023- 2024","2024 - 2025","2025 - 2026"}
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Total_working_days
+			(
+				type = number
+				displayname = "Total working days"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Total_days_present
+			(
+				type = number
+				displayname = "Total days present"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Student_s_Date_of_birth
+			(
+    			type = date
+				displayname = " Student's Date of birth"
+				alloweddays = 0,1,2,3,4,5,6
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Student_s_Father_name
+			(
+    			type = name
+				displayname = "Student's Father name"
+     			prefix
+     			(
+	     			 type = prefix
+	     			 displayname ="Prefix"
+	     			 visibility = false
+	     			 value = {"Mr.","Mrs.","Ms."}
+     			) 
+     			first_name
+     			(
+	     			 type = first_name
+	     			 displayname ="First Name"
+     			) 
+     			last_name
+     			(
+	     			 type = last_name
+	     			 displayname ="Last Name"
+     			) 
+     			suffix
+     			(
+	     			 type = suffix
+	     			 displayname ="Suffix"
+	     			 visibility = false
+     			) 
+	 			row = 1
+	 			column = 1   
+				width = medium
+				personal data = true
+			)
+			must have Student_s_Mother_name
+			(
+    			type = name
+				displayname = "Student's Mother name"
+     			prefix
+     			(
+	     			 type = prefix
+	     			 displayname ="Prefix"
+	     			 visibility = false
+	     			 value = {"Mr.","Mrs.","Ms."}
+     			) 
+     			first_name
+     			(
+	     			 type = first_name
+	     			 displayname ="First Name"
+     			) 
+     			last_name
+     			(
+	     			 type = last_name
+	     			 displayname ="Last Name"
+     			) 
+     			suffix
+     			(
+	     			 type = suffix
+	     			 displayname ="Suffix"
+	     			 visibility = false
+     			) 
+	 			row = 1
+	 			column = 1   
+				width = medium
+				personal data = true
+			)
+			must have Student_Mail
+			(
+    			type = email
+				displayname = "Student Mail"
+				maxchar = 80
+	 			row = 1
+	 			column = 1   
+				width = medium
+				personal data = true
+			)
+			must have Degree
+			(
+				type = picklist
+				maxchar = 100
+				values = {"BE","BTech","ME","MTech"}
+				sortorder = ascending
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Branch
+			(
+				type = picklist
+				maxchar = 100
+				values = {"Computer science and engineering","Electronics and communication engineering","Electrical and electronics engineering","Information technology","Mechanical engineering","Aeronatical engineering","Artificial intelligence and data science","Cyber security"}
+				sortorder = ascending
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Select_semester
+			(
+				type = picklist
+				displayname = "Select semester"
+				maxchar = 100
+				values = {"Semester 1","Semester 2","Semester  3","Semester 4","Semester 5","Semester 6","Semester 7","Semester 8"}
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_Name
+			(
+    			type = text
+				displayname = "Subject Name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks
+			(
+				type = number
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks
+			(
+				type = number
+				displayname = "Internal Marks"
+				maxchar = 3
+				initial value = 1
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name_1
+			(
+    			type = text
+				displayname = "Subject name "
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code1
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks1
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks1
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name2
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code2
+			(
+				type = number
+				displayname = "Subject code "
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks2
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks2
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name3
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code3
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks3
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks3
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name4
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code4
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks4
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks4
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name5
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code5
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks5
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks5
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name6
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code6
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks6
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks6
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name7
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code7
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks7
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks7
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name8
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code8
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks8
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks8
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name9
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code9
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks9
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks9
+			(
+				type = number
+				displayname = "Internal Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_name10
+			(
+    			type = text
+				displayname = "Subject name"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Subject_code10
+			(
+				type = number
+				displayname = "Subject code"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Marks10
+			(
+				type = number
+				displayname = "Marks"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Internal_Marks10
+			(
+				type = number
+				displayname = "Internal Marks"
+				maxchar = 3
+				initial value = 1
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			SubForm
+			(
+				type = grid
+				Name
+				(
+    				type = name
+     				prefix
+     				(
+	     				 type = prefix
+	     				 displayname ="Prefix"
+	     				 visibility = false
+	     				 value = {"Mr.","Mrs.","Ms."}
+     				) 
+     				first_name
+     				(
+	     				 type = first_name
+	     				 displayname ="First Name"
+     				) 
+     				last_name
+     				(
+	     				 type = last_name
+	     				 displayname ="Last Name"
+     				) 
+     				suffix
+     				(
+	     				 type = suffix
+	     				 displayname ="Suffix"
+	     				 visibility = false
+     				) 
+					width = medium
+					personal data = true
+				)
+				Subject_Name101
+				(
+    				type = text
+					displayname = "Subject Name"
+					width = medium
+				)
+				Subject_code101
+				(
+    				type = text
+					displayname = "Subject code"
+					width = medium
+				)
+				Marks101
+				(
+					type = number
+					displayname = "Marks"
+					maxchar = 3
+					width = medium
+				)
+				Internal_marks101
+				(
+					type = number
+					displayname = "Internal marks"
+					maxchar = 3
+					width = medium
+				)
+				Subject_Name102
+				(
+    				type = text
+					displayname = "Subject Name"
+					maxchar = 250
+					width = medium
+				)
+	 			row = 2
+	 			column = 1   
+				width = medium
+			)
+	
+			actions
+			{
+				on add
+				{
+					submit
+					(
+   						type = submit
+   						displayname = "Submit"
+					)
+				}
+				on edit
+				{
+					update
+					(
+   						type = submit
+   						displayname = "Update"
+					)
+					cancel
+					(
+   						type = cancel
+   						displayname = "Cancel"
+					)
+				}
+			}
+		print template
+			{
+				test_test
+				{
+							displayname = "test test"
+							content = {"layout":"1","pageNumberOption":null,"orientation":"null","isFooterEnabled":false,"mainLayout":[{"elements":[],"id":"1"}],"resize":"a4","templateStyle":"text-align: left; width: 793.7px; background-image: none;","isHeaderEnabled":false}
+				}
+				test
+				{
+							content = {"layout":"1","pageNumberOption":null,"orientation":"null","isFooterEnabled":false,"mainLayout":[{"elements":[],"id":"1"}],"resize":"a4","templateStyle":"text-align: left; width: 793.7px; background-image: none;","isHeaderEnabled":false}
+				}
+			}
+		}
+	}
+	reports
+	{
+		default list Student_all_details_Report
+		{
+			displayName = "Student all details Report"
+			print template = test
+			show all rows from Student_all_details    
+			(
+				Student_Name  as "Student Name"
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Student_s_Father_name  as "Student's Father name"
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Student_s_Mother_name  as "Student's Mother name"
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Student_Mail as "Student Mail"
+				Student_s_Date_of_birth as " Student's Date of birth"
+				Select_semester as "Select semester"
+				Degree
+				Branch
+				Subject_Name as "Subject Name"
+				Subject_code as "Subject code"
+				Marks
+				Subject_name_1 as "Subject name "
+				Subject_code1 as "Subject code"
+				Marks1 as "Marks"
+				Subject_name2 as "Subject name"
+				Subject_code2 as "Subject code "
+				Marks2 as "Marks"
+				Subject_name3 as "Subject name"
+				Subject_code3 as "Subject code"
+				Marks3 as "Marks"
+				Subject_name4 as "Subject name"
+				Subject_code4 as "Subject code"
+				Marks4 as "Marks"
+				Subject_name5 as "Subject name"
+				Subject_code5 as "Subject code"
+				Marks5 as "Marks"
+				Subject_name6 as "Subject name"
+				Subject_code6 as "Subject code"
+				Marks6 as "Marks"
+				Subject_name7 as "Subject name"
+				Subject_code7 as "Subject code"
+				Marks7 as "Marks"
+				Subject_name8 as "Subject name"
+				Subject_code8 as "Subject code"
+				Marks8 as "Marks"
+				Subject_name9 as "Subject name"
+				Subject_code9 as "Subject code"
+				Marks9 as "Marks"
+				SubForm.Name as "SubForm"
+				Subject_name10 as "Subject name"
+				Subject_code10 as "Subject code"
+				Marks10 as "Marks"
+				Internal_Marks as "Internal Marks"
+				Internal_Marks10 as "Internal Marks"
+				Student_Register_number as "Student Register number"
+				Internal_Marks1 as "Internal Marks"
+				Internal_Marks2 as "Internal Marks"
+				Internal_Marks3 as "Internal Marks"
+				Internal_Marks4 as "Internal Marks"
+				Internal_Marks5 as "Internal Marks"
+				Internal_Marks6 as "Internal Marks"
+				Internal_Marks7 as "Internal Marks"
+				Internal_Marks8 as "Internal Marks"
+				Internal_Marks9 as "Internal Marks"
+			)
+		}
+	}
+	pages
+	{
+		page try
+		{
+			displayname = "try"
+			Content="<zml    \t\t\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t\n</layout>\n</zml>"
+		}
+		page try1
+		{
+			displayname = "try"
+			Content="<zml    \t\t\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t\n</layout>\n</zml>"
+		}
+		page try1page
+		{
+			displayname = "try1page"
+			Content="<zml    \n\t\t\tisPdfEnabled='true'\n\t\t\n\t\t\tisPrintEnabled='true'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t\n</layout>\n</zml>"
+		}
+	}
+
+
+
+
+		workflow
+		{
+		form
+		{
+			Hide_fields as "Hide fields"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+
+				on load
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											hide Branch;
+										hide SubForm.Name;
+										hide Select_semester;
+										hide Subject_code;
+										hide Subject_code1;
+										hide Subject_code2;
+										hide Subject_code3;
+										hide Subject_code4;
+										hide Subject_code5;
+										hide Subject_code6;
+										hide Subject_code7;
+										hide Subject_code8;
+										hide Subject_code9;
+										hide Subject_code10;
+										hide Subject_Name;
+										hide Subject_name_1;
+										hide Subject_name2;
+										hide Subject_name3;
+										hide Subject_name4;
+										hide Subject_name5;
+										hide Subject_name6;
+										hide Subject_name7;
+										hide Subject_name8;
+										hide Subject_name9;
+										hide Subject_name10;
+										hide Marks;
+										hide Marks1;
+										hide Marks2;
+										hide Marks3;
+										hide Marks4;
+										hide Marks5;
+										hide Marks6;
+										hide Marks7;
+										hide Marks8;
+										hide Marks9;
+										hide Marks10;
+										hide SubForm;
+										hide Internal_Marks;
+										hide Internal_Marks10;
+										hide Internal_Marks;
+										hide Internal_Marks1;
+										hide Internal_Marks2;
+										hide Internal_Marks3;
+										hide Internal_Marks4;
+										hide Internal_Marks5;
+										hide Internal_Marks6;
+										hide Internal_Marks7;
+										hide Internal_Marks8;
+										hide Internal_Marks9;
+										hide Internal_Marks10;
+						)
+					}
+				}
+
+			}
+			Show_field as "Show field"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+
+				on user input of Degree
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											if(Degree == "BE" || Degree == "ME" || Degree == "BTech" || Degree == "MTech")
+										{
+											show Branch;
+										}
+										else
+										{
+											hide Branch;
+											hide Select_semester;
+										}
+						)
+					}
+				}
+
+			}
+			Enable_the_subjects_subje as "Enable the subjects-subjectcode-marks"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+					status = inactive
+
+				on user input of Branch
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											if(Select_semester == "1" || Select_semester == "3" || Select_semester == "5" || Select_semester == "7")
+										{
+											show Subject_code;
+											show Subject_code1;
+											show Subject_code2;
+											show Subject_code3;
+											show Subject_code4;
+											show Subject_Name;
+											show Subject_name_1;
+											show Subject_name2;
+											show Subject_name3;
+											show Subject_name4;
+											show Marks;
+											show Marks1;
+											show Marks2;
+											show Marks3;
+											show Marks4;
+										}
+						)
+					}
+				}
+
+			}
+			Show_Subject_SubjectCode_ as "Show Subject-SubjectCode-Marks"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+
+				on user input of Select_semester
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											// hide Subject_code;
+										// hide Subject_Name;
+										// hide Marks;
+										if(Select_semester == "Semester 1" || Select_semester == "Semester  3" || Select_semester == "Semester 5" || Select_semester == "Semester 7")
+										{
+											show Subject_code;
+											show Subject_code1;
+											show Subject_code2;
+											show Subject_code3;
+											show Subject_code4;
+											show Subject_Name;
+											show Subject_name_1;
+											show Subject_name2;
+											show Subject_name3;
+											show Subject_name4;
+											show Marks;
+											show Marks1;
+											show Marks2;
+											show Marks3;
+											show Marks4;
+										}
+										else
+										{
+											hide Subject_code;
+											hide Subject_code1;
+											hide Subject_code2;
+											hide Subject_code3;
+											hide Subject_code4;
+											hide Subject_Name;
+											hide Subject_name_1;
+											hide Subject_name2;
+											hide Subject_name3;
+											hide Subject_name4;
+											hide Marks;
+											hide Marks1;
+											hide Marks2;
+											hide Marks3;
+											hide Marks4;
+										}
+										if(Select_semester == "Semester 2" || Select_semester == "Semester 4" || Select_semester == "Semester 6" || Select_semester == "Semester 8")
+										{
+											show Subject_code5;
+											show Subject_code6;
+											show Subject_code7;
+											show Subject_code8;
+											show Subject_code9;
+											show Subject_code10;
+											show Subject_name5;
+											show Subject_name6;
+											show Subject_name7;
+											show Subject_name8;
+											show Subject_name9;
+											show Subject_name10;
+											show Marks5;
+											show Marks6;
+											show Marks7;
+											show Marks8;
+											show Marks9;
+											show Marks10;
+										}
+										else
+										{
+											hide Subject_code5;
+											hide Subject_code6;
+											hide Subject_code7;
+											hide Subject_code8;
+											hide Subject_code9;
+											hide Subject_code10;
+											hide Subject_name5;
+											hide Subject_name6;
+											hide Subject_name7;
+											hide Subject_name8;
+											hide Subject_name9;
+											hide Subject_name10;
+											hide Marks5;
+											hide Marks6;
+											hide Marks7;
+											hide Marks8;
+											hide Marks9;
+											hide Marks10;
+										}
+						)
+					}
+				}
+
+			}
+			Enable_select_semester as "Enable select semester"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+
+				on user input of Branch
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											if(Branch == "Computer science and engineering" || Branch == "Electronics and communication engineering" || Branch == "Electrical and electronics engineering" || Branch == "Information technology" || Branch == "Mechanical engineering" || Branch == "Aeronatical engineering" || Branch == "Artificial intelligence and data science" || Branch == "Cyber security")
+										{
+											show Select_semester;
+										}
+										else
+										{
+											hide Select_semester;
+										}
+						)
+					}
+				}
+
+			}
+			After_form_submission as "After form submission"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+
+				on success
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											ticket_html = "";
+										ticket_html = ticket_html + "<html>";
+										ticket_html = ticket_html + "<head><meta charset='UTF-8'><title>College Report Card</title></head>";
+										ticket_html = ticket_html + "<body style='margin:0;padding:20px;background:#f2f4f8;font-family:Arial,sans-serif;'>";
+										ticket_html = ticket_html + "<table width='100%' cellspacing='0' cellpadding='0'><tr><td align='center'>";
+										ticket_html = ticket_html + "<table width='800' style='background:#ffffff;border-radius:12px;padding:30px;box-shadow:0 8px 20px rgba(0,0,0,0.1);'>";
+										/* Header*/
+										ticket_html = ticket_html + "<tr><td style='background:#2f80ed;color:#ffffff;padding:20px;border-radius:8px;'>";
+										ticket_html = ticket_html + "<table width='100%' cellspacing='0' cellpadding='0'><tr>";
+										/* Image Left */
+										ticket_html = ticket_html + "<td width='120' style='vertical-align:middle;'>" + "<img src='https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170309311/74165534-college-logo-element.jpg' style='width:100px;height:120px;'>" + "</td>";
+										/* Text Right */
+										/* Text Right - Aligned Left with White Links */
+										ticket_html = ticket_html + "<td style='text-align:left; vertical-align:middle; padding-left:20px;'>";
+										ticket_html = ticket_html + "<h1 style='margin:0; color:#ffffff;'>National college of Engineering</h1>";
+										ticket_html = ticket_html + "<h2 style='margin:5px 0 0 0; font-weight:bold; color:#ffffff;'>Semester Report Card for academic year : " + input.Academic_year + "</h2>";
+										/* Email with White Link */
+										ticket_html = ticket_html + "<p style='margin:5px 0 0 0; font-weight:bold; color:#ffffff;'>Email: ";
+										ticket_html = ticket_html + "<a href='mailto:contactnationalcollegeofengineering@nce.com' style='color:#ffffff; text-decoration:none;'>contactnationalcollegeofengineering@nce.com</a></p>";
+										/* Website with White Link */
+										ticket_html = ticket_html + "<p style='margin:5px 0 0 0; font-weight:bold; color:#ffffff;'>Website: ";
+										ticket_html = ticket_html + "<a href='http://www.nce.com' style='color:#ffffff; text-decoration:none;'>www.nce.com</a></p>";
+										ticket_html = ticket_html + "</td>";
+										ticket_html = ticket_html + "</tr></table>";
+										ticket_html = ticket_html + "</td></tr>";
+										/* Student Details */
+										ticket_html = ticket_html + "<tr><td style='padding-top:20px;'>";
+										ticket_html = ticket_html + "<table width='100%'><tr>";
+										ticket_html = ticket_html + "<td>";
+										ticket_html = ticket_html + "<p><strong>Name:</strong> " + input.Student_Name + "</p>";
+										ticket_html = ticket_html + "<p><strong>Roll No:</strong> " + input.Student_Register_number + "</p>";
+										ticket_html = ticket_html + "</td>";
+										ticket_html = ticket_html + "<td align='right'>";
+										ticket_html = ticket_html + "<p><strong>Department:</strong> " + input.Branch + "</p>";
+										ticket_html = ticket_html + "<p><strong>Semester:</strong> " + input.Select_semester + "</p>";
+										ticket_html = ticket_html + "</td>";
+										ticket_html = ticket_html + "</tr></table>";
+										ticket_html = ticket_html + "</td></tr>";
+										/* Marks Table */
+										ticket_html = ticket_html + "<tr><td>";
+										ticket_html = ticket_html + "<table width='100%' border='1' cellspacing='0' cellpadding='8' style='border-collapse:collapse;margin-top:20px;text-align:center;'>";
+										ticket_html = ticket_html + "<tr style='background:#e9f2ff;font-weight:bold;'>";
+										ticket_html = ticket_html + "<td style='border:1px solid #000;'>Subject code</td>";
+										ticket_html = ticket_html + "<td style='border:1px solid #000;'>Subject</td>";
+										// ticket_html = ticket_html + "<td style='border:1px solid #000;'>Internal</td>";
+										ticket_html = ticket_html + "<td style='border:1px solid #000;'>Marks</td>";
+										ticket_html = ticket_html + "<td style='border:1px solid #000;'>Grade</td>";
+										// ticket_html = ticket_html + "<td style='border:1px solid #000;'>Total</td>";
+										// ticket_html = ticket_html + "<tr style='background:#e9f2ff;font-weight:bold;'>";
+										if(input.Subject_code != null)
+										{
+											/* Subject 1 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_Name + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											if(input.Marks > 49 && input.Marks < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks > 60 && input.Marks < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks > 70 && input.Marks < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks > 80 && input.Marks < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code1 != null)
+										{
+											/* Subject 2 */
+											ticket_html = ticket_html + "<tr>";
+											// ticket_html = ticket_html + "<td>" + input.Subject2 + "</td>"; //subject
+											ticket_html = ticket_html + "<td>" + input.Subject_code1 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name_1 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks1 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks1 + "</td>";
+											if(input.Marks1 > 49 && input.Marks1 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks1 > 60 && input.Marks1 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks1 > 70 && input.Marks1 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks1 > 80 && input.Marks1 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.Total2 + "</td>"; //total
+											// ticket_html = ticket_html + "<td style='color:orange;font-weight:bold;'>" + input.Grade2 + "</td>"; //grade 2
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code2 != null)
+										{
+											/* Subject 3*/
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code2 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name2 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks2 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks2 + "</td>";
+											if(input.Marks2 > 49 && input.Marks2 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks2 > 60 && input.Marks2 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks2 > 70 && input.Marks2 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks2 > 80 && input.Marks2 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code3 != null)
+										{
+											/* Subject 4 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code3 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name3 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks3 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks3 + "</td>";
+											if(input.Marks3 > 49 && input.Marks3 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks3 > 60 && input.Marks3 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks3 > 70 && input.Marks3 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks3 > 80 && input.Marks3 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code4 != null)
+										{
+											/* Subject 5 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code4 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name4 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks4 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks4 + "</td>";
+											if(input.Marks4 > 49 && input.Marks4 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks4 > 60 && input.Marks4 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks4 > 70 && input.Marks4 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks4 > 80 && input.Marks4 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code5 != null)
+										{
+											/* Subject 6 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code5 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name5 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks5 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks5 + "</td>";
+											if(input.Marks5 > 49 && input.Marks5 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks5 > 60 && input.Marks5 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks5 > 70 && input.Marks5 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks5 > 80 && input.Marks5 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code6 != null)
+										{
+											/* Subject 7 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code6 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name6 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks6 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks6 + "</td>";
+											if(input.Marks6 > 49 && input.Marks6 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks6 > 60 && input.Marks6 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks6 > 70 && input.Marks6 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks6 > 80 && input.Marks6 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code7 != null)
+										{
+											/* Subject 8 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code7 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name7 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks7 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks7 + "</td>";
+											if(input.Marks7 > 49 && input.Marks7 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks7 > 60 && input.Marks7 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks7 > 70 && input.Marks7 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks7 > 80 && input.Marks7 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code8 != null)
+										{
+											/* Subject 9 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code8 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name8 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks8 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks8 + "</td>";
+											if(input.Marks8 > 49 && input.Marks8 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks8 > 60 && input.Marks8 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks8 > 70 && input.Marks8 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks8 > 80 && input.Marks8 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code9 != null)
+										{
+											/* Subject 10 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code9 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name9 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks9 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks9 + "</td>";
+											if(input.Marks9 > 49 && input.Marks9 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks9 > 60 && input.Marks9 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks9 > 70 && input.Marks9 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks9 > 80 && input.Marks9 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										if(Subject_code10 != null)
+										{
+											/* Subject 11 */
+											ticket_html = ticket_html + "<tr>";
+											ticket_html = ticket_html + "<td>" + input.Subject_code10 + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Subject_name10 + "</td>";
+											// 	ticket_html = ticket_html + "<td>" + input.Internal_Marks10 + "</td>";
+											// ticket_html = ticket_html + "<td>" + input.External_Marks + "</td>";
+											ticket_html = ticket_html + "<td>" + input.Marks10 + "</td>";
+											if(input.Marks10 > 49 && input.Marks10 < 60)
+											{
+												grade = "B";
+											}
+											else if(input.Marks10 > 60 && input.Marks10 < 70)
+											{
+												grade = "B+";
+											}
+											else if(input.Marks10 > 70 && input.Marks10 < 80)
+											{
+												grade = "A";
+											}
+											else if(input.Marks10 > 80 && input.Marks10 < 90)
+											{
+												grade = "A+";
+											}
+											else
+											{
+												grade = "O";
+											}
+											ticket_html = ticket_html + "<td>" + grade + "</td>";
+											// ticket_html = ticket_html + "<td style='color:green;font-weight:bold;'>" + input.Grade1 + "</td>"; //grade
+											ticket_html = ticket_html + "</tr>";
+										}
+										/* Add more subjects same pattern */
+										ticket_html = ticket_html + "</table>";
+										ticket_html = ticket_html + "</td></tr>";
+										/* Summary */
+										ticket_html = ticket_html + "<tr><td style='padding-top:20px;'>";
+										ticket_html = ticket_html + "<table width='100%'><tr>";
+										ticket_html = ticket_html + "<td>";
+										// ticket_html = ticket_html + "<p><strong>Total Marks:</strong> " + input.Total_Marks + "</p>"; //total marks
+										// ticket_html = ticket_html + "<p><strong>Percentage:</strong> " + input.Percentage + "%</p>"; //percentage
+										ticket_html = ticket_html + "</td>";
+										ticket_html = ticket_html + "<td align='right'>";
+										// ticket_html = ticket_html + ""
+										ticket_html = ticket_html + "<table style='width:100%; border-collapse:collapse; font-family:Arial, sans-serif; text-align:center;'>";
+										ticket_html = ticket_html + "<tr style='background:#d9dee5; font-weight:bold;'>";
+										ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>Total Working Days</th>";
+										ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>Total Present Days</th>";
+										ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>Attendance Percentage</th>";
+										ticket_html = ticket_html + "</tr>";
+										ticket_html = ticket_html + "<tr>";
+										ticket_html = ticket_html + "<td style='border:1px solid #777; padding:8px;'>" + input.Total_working_days + "</td>";
+										ticket_html = ticket_html + "<td style='border:1px solid #777; padding:8px;'>" + input.Total_days_present + "</td>";
+										attendance_percentage = input.Total_days_present / input.Total_working_days * 100;
+										ticket_html = ticket_html + "<td style='border:1px solid #777; padding:8px;'>" + attendance_percentage + "</td>";
+										ticket_html = ticket_html + "</tr>";
+										ticket_html = ticket_html + "</table>";
+										list = Collection();
+										if(Marks != null && Marks1 != null && Marks2 != null && Marks3 != null && Marks4 != null)
+										{
+											total = input.Marks + input.Marks1 + input.Marks2 + input.Marks3 + input.Marks4;
+											ticket_html = ticket_html + "<p><strong>Total</strong> <span style='color:green;font-weight:bold;'>" + total + "</span></p>";
+										}
+										else if(Marks5 != null && Marks6 != null && Marks7 != null && Marks8 != null && Marks9 != null && Marks10 != null)
+										{
+											total1 = input.Marks5 + input.Marks6 + input.Marks7 + input.Marks8 + input.Marks9 + input.Marks10;
+											ticket_html = ticket_html + "<p><strong>Total</strong> <span style='color:green;font-weight:bold;'>" + total1 + "</span></p>";
+										}
+										if(Marks >= 50 && Marks1 >= 50 && Marks2 >= 50 && Marks3 >= 50 && Marks4 >= 50)
+										{
+											Result = "Pass";
+										}
+										else if(Marks5 >= 50 && Marks6 >= 50 && Marks7 >= 50 && Marks8 >= 50 && Marks9 >= 50 && Marks10 >= 50)
+										{
+											Result = "Pass";
+										}
+										else
+										{
+											Result = "Fail";
+										}
+										ticket_html = ticket_html + "<p><strong>Result:</strong> <span style='color:green;font-weight:bold;'>" + Result + "</span></p>";
+										//calculating percentage 
+										if(total != null)
+										{
+											one = total / 5;
+											ticket_html = ticket_html + "<p><strong>Percentage</strong> <span style='color:green;font-weight:bold;'>" + one + " " + "%" + "</span></p>";
+										}
+										else if(total1 != null)
+										{
+											two = total1 / 6;
+											ticket_html = ticket_html + "<p><strong>Percentage</strong> <span style='color:green;font-weight:bold;'>" + two + " " + "%" + "</span></p>";
+										}
+										//Calculating cgpa
+										if(one != null)
+										{
+											cgpa_for_odd_sem = one / 10;
+											ticket_html = ticket_html + "<p><strong>SCGPA:</strong> <span style='color:green;font-weight:bold;'>" + cgpa_for_odd_sem + "</span></p>";
+										}
+										else if(two != null)
+										{
+											cgpa_for_even_sem = two / 10;
+											ticket_html = ticket_html + "<p><strong>SCGPA:</strong> <span style='color:green;font-weight:bold;'>" + cgpa_for_even_sem + "</span></p>";
+										}
+										// ticket_html = ticket_html + "<p><strong>CGPA:</strong> " + input.CGPA + "</p>"; //cgpa
+										// Signature Table
+										ticket_html = ticket_html + "<table style='width:100%; border-collapse:collapse; font-family:Arial, sans-serif; text-align:center;'>";
+										// Header Row
+										ticket_html = ticket_html + "<tr style='background:#d9dee5; font-weight:bold;'>";
+										ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>Class Advisor Signature</th>";
+										ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>HOD Signature</th>";
+										ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>Principal</th>";
+										ticket_html = ticket_html + "</tr>";
+										// Image Row
+										ticket_html = ticket_html + "<tr>";
+										ticket_html = ticket_html + "<td style='border:1px solid #333; padding:10px;'>";
+										ticket_html = ticket_html + "<img src='https://signaturesideas.com/cdn/shop/products/image_e8b32f36-f4d1-43f6-8320-72828c912400.jpg?v=1706573693&width=1445' width='120' height='60' style='display:block; margin:auto;'>";
+										ticket_html = ticket_html + "</td>";
+										ticket_html = ticket_html + "<td style='border:1px solid #333; padding:10px;'>";
+										ticket_html = ticket_html + "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBkbeQdbQvfuZ-D1vBZM3ZNxxFz9hBu54dg&s' width='120' height='60' style='display:block; margin:auto;'>";
+										ticket_html = ticket_html + "</td>";
+										ticket_html = ticket_html + "<td style='border:1px solid #333; padding:10px;'>";
+										ticket_html = ticket_html + "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1l5aBSafYEW4fUnULcSkAburz2Z2bsG0NL1HGjZ-&s' width='120' height='60' style='display:block; margin:auto;'>";
+										ticket_html = ticket_html + "</td>";
+										ticket_html = ticket_html + "</tr>";
+										ticket_html = ticket_html + "</table>";
+										ticket_html = ticket_html + "</td>";
+										ticket_html = ticket_html + "</tr></table>";
+										ticket_html = ticket_html + "</td></tr>";
+										ticket_html = ticket_html + "</table>";
+										ticket_html = ticket_html + "</td></tr></table>";
+										// // Signature Table
+										// ticket_html = ticket_html + "<table style='width:100%; border-collapse:collapse; font-family:Arial, sans-serif; text-align:center;'>";
+										// // Header Row
+										// ticket_html = ticket_html + "<tr style='background:#d9dee5; font-weight:bold;'>";
+										// ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>Class Advisor Signature</th>";
+										// ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>HOD Signature</th>";
+										// ticket_html = ticket_html + "<th style='border:1px solid #333; padding:10px;'>Principal</th>";
+										// ticket_html = ticket_html + "</tr>";
+										// // Image Row
+										// ticket_html = ticket_html + "<tr>";
+										// ticket_html = ticket_html + "<td style='border:1px solid #333; padding:10px;'>";
+										// ticket_html = ticket_html + "<img src='https://static.vecteezy.com/system/resources/previews/025/866/358/non_2x/fake-autograph-samples-hand-drawn-signatures-examples-of-documents-certificates-and-contracts-with-inked-and-handwritten-lettering-vector.jpg' width='120' height='60' style='display:block; margin:auto;'>";
+										// ticket_html = ticket_html + "</td>";
+										// ticket_html = ticket_html + "<td style='border:1px solid #333; padding:10px;'>";
+										// ticket_html = ticket_html + "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBkbeQdbQvfuZ-D1vBZM3ZNxxFz9hBu54dg&s' width='120' height='60' style='display:block; margin:auto;'>";
+										// ticket_html = ticket_html + "</td>";
+										// ticket_html = ticket_html + "<td style='border:1px solid #333; padding:10px;'>";
+										// ticket_html = ticket_html + "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1l5aBSafYEW4fUnULcSkAburz2Z2bsG0NL1HGjZ-&s' width='120' height='60' style='display:block; margin:auto;'>";
+										// ticket_html = ticket_html + "</td>";
+										// ticket_html = ticket_html + "</tr>";
+										// ticket_html = ticket_html + "</table>";
+										// ticket_html = ticket_html + "</body></html>";
+										info ticket_html;
+										/* Send Mail */
+										pdfFile1 = zoho.file.convertToPDF(ticket_html);
+										info pdfFile1;
+										// This creates a hidden unique timestamp that prevents Gmail trimming
+										ticket_html = ticket_html + "<div style='display:none !important; font-size:1px; color:#ffffff; visibility:hidden; opacity:0;'>" + now + "</div>";
+										ticket_html = ticket_html + "</body></html>";
+										sendmail
+										[
+											from :"zentegrademo31@gmail.com"
+											to :input.Student_Mail
+											cc:"manikandansjobzen@gmail.com"
+											reply to :"manikandan@zentegra.com"
+											subject :"Your Semester Report Card"
+											message :ticket_html
+											Attachments :file:pdfFile1
+										]
+						)
+					}
+				}
+
+			}
+			test as "test"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+					status = inactive
+
+				on user input of Select_semester
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											row_collection = Collection();
+										if(Select_semester == "Semester 1")
+										{
+											show SubForm;
+											input.SubForm.clear();
+											lists = {1,2,3,4,5};
+											for each  i in lists
+											{
+												row_obj = Student_all_details.SubForm();
+												row_collection.insert(row_obj);
+											}
+											input.SubForm.insert(row_collection);
+										}
+										else if(Select_semester == "Semester  3")
+										{
+											show SubForm;
+											input.SubForm.clear();
+											lists = {1,2,3,4,5};
+											for each  i in lists
+											{
+												row_obj = Student_all_details.SubForm();
+												row_collection.insert(row_obj);
+											}
+											input.SubForm.insert(row_collection);
+										}
+										else if(Select_semester == "Semester 5")
+										{
+											show SubForm;
+											input.SubForm.clear();
+											lists = {1,2,3,4,5};
+											for each  i in lists
+											{
+												row_obj = Student_all_details.SubForm();
+												row_collection.insert(row_obj);
+											}
+											input.SubForm.insert(row_collection);
+										}
+										else if(Select_semester == "Semester 7")
+										{
+											show SubForm;
+											input.SubForm.clear();
+											lists = {1,2,3,4,5};
+											for each  i in lists
+											{
+												row_obj = Student_all_details.SubForm();
+												row_collection.insert(row_obj);
+											}
+											input.SubForm.insert(row_collection);
+										}
+										else if(Select_semester == "Semester 2")
+										{
+											show SubForm;
+											input.SubForm.clear();
+											lists = {1,2,3,4,5,6};
+											for each  i in lists
+											{
+												row_obj = Student_all_details.SubForm();
+												row_collection.insert(row_obj);
+											}
+											input.SubForm.insert(row_collection);
+										}
+										else if(Select_semester == "Semester 4")
+										{
+											show SubForm;
+											input.SubForm.clear();
+											lists = {1,2,3,4,5,6};
+											for each  i in lists
+											{
+												row_obj = Student_all_details.SubForm();
+												row_collection.insert(row_obj);
+											}
+											input.SubForm.insert(row_collection);
+										}
+										else if(Select_semester == "Semester 6")
+										{
+											show SubForm;
+											input.SubForm.clear();
+											lists = {1,2,3,4,5,6};
+											for each  i in lists
+											{
+												row_obj = Student_all_details.SubForm();
+												row_collection.insert(row_obj);
+											}
+											input.SubForm.insert(row_collection);
+										}
+										else if(Select_semester == "Semester 8")
+										{
+											show SubForm;
+											input.SubForm.clear();
+											lists = {1,2,3,4,5,6};
+											for each  i in lists
+											{
+												row_obj = Student_all_details.SubForm();
+												row_collection.insert(row_obj);
+											}
+											input.SubForm.insert(row_collection);
+										}
+										else if(Select_semester == "")
+										{
+											input.SubForm.clear();
+											hide SubForm;
+										}
+						)
+					}
+				}
+
+			}
+			test2 as "test2"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+
+				field rules
+				{
+					actions 
+					{
+					hide add row of SubForm;
+					}
+				}
+
+			}
+			Enable_for_fields_in_subf as "Enable for fields in subform"
+			{
+				type =  form
+				form = Student_all_details
+
+				record event = on add or edit
+
+				on user input of Select_semester
+				{
+				}
+
+			}
+		}
+
+
+
+
+
+
+	}
+	share_settings
+	{
+			"Read"
+			{
+				name = "Read"
+				type = Users_Permissions
+				permissions = {Chat:true, Predefined:true, ApiAccess:true, PIIAccess:true, ePHIAccess:true}
+				description = "This profile will have read permission for all components\n"
+			}
+			"Write"
+			{
+				name = "Write"
+				type = Users_Permissions
+				permissions = {Chat:true, Predefined:true, ApiAccess:true, PIIAccess:true, ePHIAccess:true}
+				description = "This profile will have write permission for all components\n"
+			}
+			"Developer"
+			{
+				name = "Developer"
+				type = Developer
+				permissions = {Chat:false, Predefined:true, ApiAccess:true, PIIAccess:true, ePHIAccess:true}
+				description = "Developer Profile\n"
+			}
+			"Administrator"
+			{
+				name = "Administrator"
+				type = Users_Permissions
+				permissions = {Chat:true, Predefined:true, ApiAccess:true, PIIAccess:true, ePHIAccess:true}
+				description = "This profile will have all the permissions.\n"
+			}
+			"Customer"
+			{
+				name = "Customer"
+				type = Customer_Portal
+				permissions = {Chat:true, Predefined:true, ApiAccess:true, PIIAccess:true, ePHIAccess:true}
+				description = "This is the default profile having only add and view permission.\n"
+			}
+			roles
+			{
+				"CEO"
+				{
+					description = "User belonging to this role can access data of all other users."
+				}
+			}
+	}
+
+
+	web
+	{
+		forms
+		{
+			form Student_all_details
+			{
+				label placement = left
+			}
+		}
+		reports
+		{
+			report Student_all_details_Report
+			{
+				quickview
+				(
+					layout
+					(
+		 				type = -1
+						datablock1
+						(
+							layout type = -1
+							fields
+							(
+								Student_Name as "Student Name"
+								Student_s_Father_name as "Student's Father name"
+								Student_s_Mother_name as "Student's Mother name"
+								Student_Mail as "Student Mail"
+								Student_s_Date_of_birth as " Student's Date of birth"
+								Select_semester as "Select semester"
+								Subject_Name as "Subject Name"
+							)
+						)
+					)
+					menu
+    				(
+    	 				header
+    	 				(
+    		 				Edit 
+    		 				Duplicate 
+    		 				Delete 
+    	 				)
+						record
+						(
+							Edit   	   
+							Duplicate   	   
+							Delete   	   
+    					)
+    				)
+    				action
+    				(
+						on click
+						(
+							View Record   	   
+    					)
+						on right click
+						(
+							Edit   	   
+							Delete   	   
+							Duplicate   	   
+							View Record   	   
+    					)
+     				)
+				)
+
+				detailview
+				(
+					layout
+					(
+		 				type = 2
+						datablock1
+						(
+							layout type = -2
+		     				title = "Overview"
+							fields
+							(
+								Student_Name as "Student Name"
+								Student_s_Father_name as "Student's Father name"
+								Student_s_Mother_name as "Student's Mother name"
+								Student_Mail as "Student Mail"
+								Student_s_Date_of_birth as " Student's Date of birth"
+								Select_semester as "Select semester"
+								Degree
+								Branch
+								Subject_Name as "Subject Name"
+								Subject_code as "Subject code"
+								Marks
+								Subject_name_1 as "Subject name "
+								Subject_code1 as "Subject code"
+								Marks1 as "Marks"
+								Subject_name2 as "Subject name"
+								Subject_code2 as "Subject code "
+								Marks2 as "Marks"
+								Subject_name3 as "Subject name"
+								Subject_code3 as "Subject code"
+								Marks3 as "Marks"
+								Subject_name4 as "Subject name"
+								Subject_code4 as "Subject code"
+								Marks4 as "Marks"
+								Subject_name5 as "Subject name"
+								Subject_code5 as "Subject code"
+								Marks5 as "Marks"
+								Subject_name6 as "Subject name"
+								Subject_code6 as "Subject code"
+								Marks6 as "Marks"
+								Subject_name7 as "Subject name"
+								Subject_code7 as "Subject code"
+								Marks7 as "Marks"
+								Subject_name8 as "Subject name"
+								Subject_code8 as "Subject code"
+								Marks8 as "Marks"
+								Subject_name9 as "Subject name"
+								Subject_code9 as "Subject code"
+								Marks9 as "Marks"
+								SubForm.Name as "SubForm"
+								Subject_name10 as "Subject name"
+								Subject_code10 as "Subject code"
+								Marks10 as "Marks"
+								Internal_Marks as "Internal Marks"
+								Internal_Marks10 as "Internal Marks"
+								Student_Register_number as "Student Register number"
+								Internal_Marks1 as "Internal Marks"
+								Internal_Marks2 as "Internal Marks"
+								Internal_Marks3 as "Internal Marks"
+								Internal_Marks4 as "Internal Marks"
+								Internal_Marks5 as "Internal Marks"
+								Internal_Marks6 as "Internal Marks"
+								Internal_Marks7 as "Internal Marks"
+								Internal_Marks8 as "Internal Marks"
+								Internal_Marks9 as "Internal Marks"
+							)
+						)
+						datablock2
+						(
+							layout type = -1
+		     				title = "SubForm"
+		     				related field = SubForm
+							fields
+							(
+								Name
+							)
+						)
+					)
+					menu
+    				(
+    	 				header
+    	 				(
+    		 				Edit 
+    		 				Duplicate 
+    		 				Delete 
+    	 				)
+    				)
+				)
+			}
+		}
+		menu
+		{
+			space Space
+			{
+				displayname = "Space"
+				icon = "objects-spaceship"
+
+				section Student_all_details
+				{
+					displayname = "Student all details"
+					icon = "travel-world"
+					form  Student_all_details
+					{
+						icon = "travel-world"
+					}
+					report Student_all_details_Report
+					{
+						icon = "tech-desktop"
+					}
+				}
+				section App_Preferences
+				{
+					displayname = "App Preferences"
+					icon = "design-app"
+					systemcomponent
+					{
+						type = localization
+						displayname = "Language Selection"
+						icon = "education-language"
+					}
+					systemcomponent
+					{
+						type = connection
+						displayname = "Integrations"
+						icon = "tech-2-connection"
+					}
+				}
+				section Approvals
+				{
+					displayname = "Approvals"
+					icon = "ui-2-hourglass"
+					systemcomponent
+					{
+						type = approval
+						approval status = pending
+						displayname = "Pending Tasks"
+						icon = "ui-2-hourglass"
+					}
+					systemcomponent
+					{
+						type = approval
+						approval status = completed
+						displayname = "Completed Tasks"
+						icon = "design-todo"
+					}
+				}
+				section SharedAnalytics_Section
+				{
+					type = shared_user_report_section
+					displayname = "Reports"
+					icon = "business-chart-bar-33"
+				}
+				section try
+				{
+					displayname = "try"
+					icon = "transportation-air-baloon"
+					page try
+					{
+						icon = "transportation-air-baloon"
+					}
+					page try1
+					{
+						icon = "transportation-air-baloon"
+					}
+					page try1page
+					{
+						icon = "tech-desktop"
+					}
+				}
+			}
+			preference
+			{
+				icon
+				{
+					style = outline
+				}
+			}
+		}
+		customize
+		{
+			layout
+			{
+				theme = "theme_4"
+			}
+			font = "lato"
+			color options
+			{
+				color = "11"
+			}
+			logo
+			{
+				preference = "app_icon"
+				placement = "left"
+			}
+		}
+	}
+	phone
+	{
+		forms
+		{
+			form Student_all_details
+			{
+				label placement = auto
+			}
+		}
+		customize
+		{
+			layout = slidingpane
+			font = "default"
+			style = "3"
+			color options
+			{
+				color = rose
+			}
+			logo
+			{
+				preference = "none"
+			}
+		}
+	}
+	tablet
+	{
+		forms
+		{
+			form Student_all_details
+			{
+				label placement = auto
+			}
+		}
+		customize
+		{
+			layout = slidingpane
+			font = "default"
+			style = "3"
+			color options
+			{
+				color = rose
+			}
+			logo
+			{
+				preference = "none"
+			}
+		}
+	}
+	translation
+{
+{"Language_Settings":{"LANGAGUE_WITH_LOGIN":"browser"}}
+}
+}
